@@ -8,6 +8,9 @@ from typing import Any
 
 from app.seed import SEED_ROWS
 
+# 审批凭证与诊断记录是贴源审批的内部台账，不参与运营概览的业务模块统计。
+INTERNAL_MODULES = frozenset({"ods_credential", "ods_diagnostic"})
+
 
 class Store:
     def __init__(self) -> None:
@@ -16,7 +19,7 @@ class Store:
         }
 
     def module_names(self) -> list[str]:
-        return sorted(self._tables)
+        return sorted(name for name in self._tables if name not in INTERNAL_MODULES)
 
     def rows(self, module: str) -> list[dict[str, Any]]:
         return self._tables.setdefault(module, [])

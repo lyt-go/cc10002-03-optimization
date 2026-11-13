@@ -33,3 +33,15 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+.notice-text { color: #1a7f37; }
+.badge { display: inline-block; border-radius: 10px; padding: 1px 8px; font-size: 12px; border: 1px solid var(--border); }
+.badge.ok { background: #e7f6ec; border-color: #9ad4ad; color: #1a7f37; }
+.badge.warn { background: #fdf1e3; border-color: #f0c68f; color: #a15c00; }
+.cell-note { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; }
+.row-blocked td { background: #fff7f5; }
+.detail-panel { margin-top: 16px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+.detail-head { display: flex; justify-content: space-between; align-items: flex-start; }
+.detail-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 8px 0; }
+.detail-grid strong { font-size: 14px; word-break: break-all; }
+.data-table.compact th, .data-table.compact td { padding: 5px 8px; font-size: 12px; }
+.select { border: 1px solid var(--border); border-radius: 6px; padding: 4px 6px; background: #fff; }
